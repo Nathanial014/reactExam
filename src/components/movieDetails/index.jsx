@@ -9,6 +9,7 @@ import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
+import SavingsIcon from '@mui/icons-material/Savings';
 
 
 const root = {
@@ -57,6 +58,10 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <Chip
           icon={<StarRate />}
           label={`${movie.vote_average} (${movie.vote_count})`}
+        />
+        <Chip 
+          icon={<SavingsIcon />}
+          label={`Budget: ${movie.budget.toLocaleString()}m`}
         />
         <Chip label={`Released: ${movie.release_date}`} />
       </Paper>
